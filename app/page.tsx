@@ -6,6 +6,7 @@ import NpmButton from '@/components/NpmButton'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { Bricolage_Grotesque } from 'next/font/google'
+import Link from 'next/link'
 
 const bricolageGrotesque = Bricolage_Grotesque({
   weight: '700',
@@ -224,6 +225,16 @@ export default function Home() {
         {/* Footer */}
         <div className="text-sm leading-normal text-white">
           Made in San Francisco 🌉
+        </div>
+        
+        {/* Legal Links */}
+        <div className="text-sm leading-normal text-white mt-4 flex justify-center space-x-6">
+          <Link href="/privacy" className="hover:text-gray-300 transition-colors">
+            Privacy Policy
+          </Link>
+          <Link href="/terms" className="hover:text-gray-300 transition-colors">
+            Terms of Use
+          </Link>
         </div>
       </div>
     </main>

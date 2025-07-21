@@ -13,8 +13,8 @@ const bricolageGrotesque = Bricolage_Grotesque({
 })
 
 export default function Home() {
-  // Randomly select between the two background videos
-  const videoSrc = Math.random() > 0.5 ? '/water1.mp4' : '/water2.mp4'
+  // Background video source
+  const videoSrc = '/water1-small.mp4'
   
   // Device detection state
   const [deviceType, setDeviceType] = useState<'ios' | 'android' | 'desktop'>('desktop')

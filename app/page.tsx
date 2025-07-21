@@ -5,10 +5,16 @@ import GooglePlayButton from '@/components/GooglePlayButton'
 import NpmButton from '@/components/NpmButton'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
+import { Bricolage_Grotesque } from 'next/font/google'
+
+const bricolageGrotesque = Bricolage_Grotesque({
+  weight: '700',
+  subsets: ['latin'],
+})
 
 export default function Home() {
   // Randomly select between the two background videos
-  const videoSrc = Math.random() > 0.5 ? '/riding-bg-1.mp4' : '/riding-bg-2b.mp4'
+  const videoSrc = Math.random() > 0.5 ? '/water1.mp4' : '/water2.mp4'
   
   // Device detection state
   const [deviceType, setDeviceType] = useState<'ios' | 'android' | 'desktop'>('desktop')
@@ -69,19 +75,15 @@ export default function Home() {
       </video>
       
       {/* Overlay for better text readability */}
-      <div className="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
+      {/* <div className="absolute inset-0 bg-black bg-opacity-50 z-10"></div> */}
       
       {/* Content */}
       <div className="relative z-20 max-w-4xl mx-auto text-center">
         {/* Logo */}
         <div className="mb-6 mt-6">
-          <Image
-            src="/rafty-logo.svg"
-            alt="Rafty"
-            width={120}
-            height={60}
-            className="mx-auto brightness-0 invert"
-          />
+          <h1 className={`${bricolageGrotesque.className} text-4xl md:text-5xl font-bold text-white`}>
+            Happy Coder
+          </h1>
         </div>
         
         {/* Subtitle */}

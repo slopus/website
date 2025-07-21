@@ -18,6 +18,9 @@ export default function Home() {
   
   // Device detection state
   const [deviceType, setDeviceType] = useState<'ios' | 'android' | 'desktop'>('desktop')
+  
+  // Scroll position for animation
+  const [scrollProgress, setScrollProgress] = useState(0)
 
   useEffect(() => {
     // Client-side device detection
@@ -30,6 +33,20 @@ export default function Home() {
     } else {
       setDeviceType('desktop')
     }
+
+    // Scroll event listener for animation
+    const handleScroll = () => {
+      const scrollTop = window.scrollY
+      const windowHeight = window.innerHeight
+      const documentHeight = document.documentElement.scrollHeight - windowHeight
+      
+      // Calculate scroll progress (0 to 1) - faster animation
+      const progress = Math.min(scrollTop / (documentHeight * 0.45), 1)
+      setScrollProgress(progress)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   // Render store buttons based on device type
@@ -81,15 +98,15 @@ export default function Home() {
       <div className="relative z-20 max-w-4xl mx-auto text-center">
         {/* Logo */}
         <div className="mb-6 mt-6">
-          <h1 className={`${bricolageGrotesque.className} text-4xl md:text-5xl font-bold text-white`}>
+          <h1 className={`${bricolageGrotesque.className} text-4xl md:text-5xl font-bold text-black`}>
             Happy Coder
           </h1>
         </div>
         
         {/* Subtitle */}
-        <div className="text-3xl md:text-4xl leading-[100%] mb-8 text-white">
-          <p className="mb-2">Claude Code</p>
-          <p>in your pocket.</p>
+        <div className="text-3xl md:text-4xl leading-[100%] mb-8 text-black">
+          <p className="mb-2 leading-[80%]">Claude Code</p>
+          <p className="leading-[80%]">in your pocket.</p>
         </div>
         
         {/* App Store Badges */}
@@ -97,15 +114,70 @@ export default function Home() {
           {renderStoreButtons()}
         </div>
         
-        {/* App Screenshot */}
-        <div className="mb-16">
-          <Image
-            src="/app-1.png"
-            alt="Rafty App Screenshot"
-            width={400}
-            height={866}
-            className="mx-auto w-[400px] max-w-[80%] h-auto"
-          />
+        {/* App Screenshot with sliding animation */}
+        <div className="mb-16 relative">
+          <div 
+            className="relative w-[400px] max-w-[80%] h-auto mx-auto"
+            style={{ perspective: '1000px' }}
+          >
+            {/* App 2 - slides to the left */}
+            <div 
+              className="absolute inset-0 transition-transform duration-75 ease-out"
+              style={{
+                transform: `translateX(${-scrollProgress * 120}px) translateY(${scrollProgress * 20}px) translateZ(${-scrollProgress * 50}px) rotate(${-scrollProgress * 15}deg) rotateY(${scrollProgress * 25}deg) rotateX(${scrollProgress * 10}deg)`,
+                transformOrigin: 'bottom center',
+                transformStyle: 'preserve-3d',
+                filter: `drop-shadow(${scrollProgress * 20}px ${scrollProgress * 10}px ${scrollProgress * 30}px rgba(0,0,0,0.3))`,
+                zIndex: 1
+              }}
+            >
+              <Image
+                src="/app-2.png"
+                alt="Rafty App Screenshot 2"
+                width={400}
+                height={866}
+                className="w-full h-auto"
+              />
+            </div>
+
+            {/* App 1 - slides to the right */}
+            <div 
+              className="absolute inset-0 transition-transform duration-75 ease-out"
+              style={{
+                transform: `translateX(${scrollProgress * 120}px) translateY(${scrollProgress * 20}px) translateZ(${-scrollProgress * 50}px) rotate(${scrollProgress * 15}deg) rotateY(${-scrollProgress * 25}deg) rotateX(${scrollProgress * 10}deg)`,
+                transformOrigin: 'bottom center',
+                transformStyle: 'preserve-3d',
+                filter: `drop-shadow(${-scrollProgress * 20}px ${scrollProgress * 10}px ${scrollProgress * 30}px rgba(0,0,0,0.3))`,
+                zIndex: 1
+              }}
+            >
+              <Image
+                src="/app-1.png"
+                alt="Rafty App Screenshot"
+                width={400}
+                height={866}
+                className="w-full h-auto"
+              />
+            </div>
+
+            {/* App 3 - main image on top */}
+            <div 
+              className="relative z-10"
+              style={{
+                filter: `drop-shadow(0px ${scrollProgress * 5}px ${scrollProgress * 15}px rgba(0,0,0,0.2))`,
+                transform: `translateZ(${scrollProgress * 10}px)`,
+                transformStyle: 'preserve-3d'
+              }}
+            >
+              <Image
+                src="/app-3.png"
+                alt="Rafty App Screenshot 3"
+                width={400}
+                height={866}
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
         </div>
         
         {/* Features List */}
@@ -118,10 +190,6 @@ export default function Home() {
             <li className="flex items-center justify-center">
               <span className="text-white text-shadow-sm/50 mr-3">•</span>
               Open Source
-            </li>
-            <li className="flex items-center justify-center">
-              <span className="text-white text-shadow-2xs mr-3">•</span>
-              Voice-to-code
             </li>
             <li className="flex items-center justify-center">
               <span className="text-white text-shadow-lg mr-3">•</span>
@@ -144,7 +212,7 @@ export default function Home() {
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3 mt-1">2.</span>
-              Install the NPM package and run 'happy'
+              Install the NPM package on your computerand run 'happy'
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3 mt-1">3.</span>

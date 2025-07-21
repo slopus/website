@@ -118,7 +118,7 @@ export default function Home() {
         {/* App Screenshot with sliding animation */}
         <div className="mb-16 relative">
           <div 
-            className="relative w-[400px] max-w-[80%] h-auto mx-auto"
+            className="relative w-[300px] max-w-[80%] h-auto mx-auto"
             style={{ perspective: '1000px' }}
           >
             {/* App 2 - slides to the left */}

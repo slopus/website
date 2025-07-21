@@ -213,7 +213,7 @@ export default function Home() {
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3 mt-1">2.</span>
-              Install the NPM package on your computerand run 'happy'
+              Install the NPM package on your computer and run 'happy'
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3 mt-1">3.</span>

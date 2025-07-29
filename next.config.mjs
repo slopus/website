@@ -10,6 +10,8 @@ const withNextra = nextra({
 })
 
 export default withNextra({
+  output: 'export',
+  trailingSlash: false,
   typescript: {
     ignoreBuildErrors: false,
   },

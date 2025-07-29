@@ -1,7 +1,7 @@
-import { Bricolage_Grotesque } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import Link from 'next/link'
 
-const bricolageGrotesque = Bricolage_Grotesque({
+const inter = Inter({
   weight: ['400', '700'],
   subsets: ['latin'],
 })
@@ -15,7 +15,7 @@ export default function TermsOfUse() {
           <Link href="/" className="text-blue-600 hover:text-blue-800 mb-4 inline-block">
             ← Back to Home
           </Link>
-          <h1 className={`${bricolageGrotesque.className} text-4xl md:text-5xl font-bold text-black mb-2`}>
+          <h1 className={`${inter.className} text-4xl md:text-5xl font-bold text-black mb-2`}>
             Terms of Use
           </h1>
           <p className="text-gray-600">Last updated: January 2025</p>
@@ -25,7 +25,7 @@ export default function TermsOfUse() {
         <div className="prose max-w-none space-y-6 text-gray-900">
           
           <section>
-            <h2 className={`${bricolageGrotesque.className} text-2xl font-bold mb-3`}>Acceptance of Terms</h2>
+            <h2 className={`${inter.className} text-2xl font-bold mb-3`}>Acceptance of Terms</h2>
             <p>
               By downloading, installing, or using Happy, you agree to be bound by these Terms of Use. 
               If you do not agree to these terms, do not use Happy.
@@ -33,7 +33,7 @@ export default function TermsOfUse() {
           </section>
 
           <section>
-            <h2 className={`${bricolageGrotesque.className} text-2xl font-bold mb-3`}>About Happy</h2>
+            <h2 className={`${inter.className} text-2xl font-bold mb-3`}>About Happy</h2>
             <p>
               Happy is a free, open-source mobile client for AI code assistance, released under the MIT License. 
               The software is provided as-is by the open-source community without any warranties or guarantees.
@@ -41,7 +41,7 @@ export default function TermsOfUse() {
           </section>
 
           <section>
-            <h2 className={`${bricolageGrotesque.className} text-2xl font-bold mb-3`}>License</h2>
+            <h2 className={`${inter.className} text-2xl font-bold mb-3`}>License</h2>
             <p>
               Happy is licensed under the MIT License. This means you are free to:
             </p>
@@ -57,7 +57,7 @@ export default function TermsOfUse() {
           </section>
 
           <section>
-            <h2 className={`${bricolageGrotesque.className} text-2xl font-bold mb-3`}>Acceptable Use</h2>
+            <h2 className={`${inter.className} text-2xl font-bold mb-3`}>Acceptable Use</h2>
             <p>
               You agree to use Happy responsibly and in compliance with all applicable laws. You must not:
             </p>
@@ -71,7 +71,7 @@ export default function TermsOfUse() {
           </section>
 
           <section>
-            <h2 className={`${bricolageGrotesque.className} text-2xl font-bold mb-3`}>Third-Party Services</h2>
+            <h2 className={`${inter.className} text-2xl font-bold mb-3`}>Third-Party Services</h2>
             <p>
               Happy may connect to third-party AI services (such as Claude, OpenAI, etc.). You acknowledge that:
             </p>
@@ -84,7 +84,7 @@ export default function TermsOfUse() {
           </section>
 
           <section>
-            <h2 className={`${bricolageGrotesque.className} text-2xl font-bold mb-3`}>Independence and Disclaimers</h2>
+            <h2 className={`${inter.className} text-2xl font-bold mb-3`}>Independence and Disclaimers</h2>
             <p>
               <strong>Happy is an independent, community-driven project.</strong> We are not affiliated with, 
               endorsed by, or connected to Anthropic, Claude, OpenAI, or any other AI service providers. 
@@ -93,7 +93,7 @@ export default function TermsOfUse() {
           </section>
 
           <section>
-            <h2 className={`${bricolageGrotesque.className} text-2xl font-bold mb-3`}>Limitation of Liability</h2>
+            <h2 className={`${inter.className} text-2xl font-bold mb-3`}>Limitation of Liability</h2>
             <p>
               <strong>IMPORTANT:</strong> Happy is provided "AS IS" without warranty of any kind. 
               The developers, contributors, and distributors of Happy shall not be liable for:
@@ -112,7 +112,7 @@ export default function TermsOfUse() {
           </section>
 
           <section>
-            <h2 className={`${bricolageGrotesque.className} text-2xl font-bold mb-3`}>Data and Privacy</h2>
+            <h2 className={`${inter.className} text-2xl font-bold mb-3`}>Data and Privacy</h2>
             <p>
               Happy does not collect, store, or transmit any personal data or usage information. 
               All data remains on your local devices and in your direct communications with AI services. 
@@ -121,7 +121,7 @@ export default function TermsOfUse() {
           </section>
 
           <section>
-            <h2 className={`${bricolageGrotesque.className} text-2xl font-bold mb-3`}>Intellectual Property</h2>
+            <h2 className={`${inter.className} text-2xl font-bold mb-3`}>Intellectual Property</h2>
             <p>
               Happy respects intellectual property rights. As an open-source project:
             </p>
@@ -134,7 +134,7 @@ export default function TermsOfUse() {
           </section>
 
           <section>
-            <h2 className={`${bricolageGrotesque.className} text-2xl font-bold mb-3`}>Modifications to Terms</h2>
+            <h2 className={`${inter.className} text-2xl font-bold mb-3`}>Modifications to Terms</h2>
             <p>
               These terms may be updated from time to time. Changes will be reflected in the source code repository 
               and on this website. Your continued use of Happy after any changes constitutes acceptance of the new terms.
@@ -142,7 +142,7 @@ export default function TermsOfUse() {
           </section>
 
           <section>
-            <h2 className={`${bricolageGrotesque.className} text-2xl font-bold mb-3`}>Termination</h2>
+            <h2 className={`${inter.className} text-2xl font-bold mb-3`}>Termination</h2>
             <p>
               You may stop using Happy at any time by uninstalling the software. These terms remain in effect 
               regarding your past use of Happy and any ongoing obligations or liabilities.
@@ -150,7 +150,7 @@ export default function TermsOfUse() {
           </section>
 
           <section>
-            <h2 className={`${bricolageGrotesque.className} text-2xl font-bold mb-3`}>Governing Law</h2>
+            <h2 className={`${inter.className} text-2xl font-bold mb-3`}>Governing Law</h2>
             <p>
               These terms shall be governed by and construed in accordance with the laws of the jurisdiction 
               where you use the software, without regard to conflict of law principles.
@@ -158,7 +158,7 @@ export default function TermsOfUse() {
           </section>
 
           <section>
-            <h2 className={`${bricolageGrotesque.className} text-2xl font-bold mb-3`}>Contact</h2>
+            <h2 className={`${inter.className} text-2xl font-bold mb-3`}>Contact</h2>
             <p>
               For questions about these Terms of Use, please visit our{' '}
               <a 

@@ -1,7 +1,7 @@
-import { Bricolage_Grotesque } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import Link from 'next/link'
 
-const bricolageGrotesque = Bricolage_Grotesque({
+const inter = Inter({
   weight: ['400', '700'],
   subsets: ['latin'],
 })
@@ -15,7 +15,7 @@ export default function PrivacyPolicy() {
           <Link href="/" className="text-blue-600 hover:text-blue-800 mb-4 inline-block">
             ← Back to Home
           </Link>
-          <h1 className={`${bricolageGrotesque.className} text-4xl md:text-5xl font-bold text-black mb-2`}>
+          <h1 className={`${inter.className} text-4xl md:text-5xl font-bold text-black mb-2`}>
             Privacy Policy
           </h1>
           <p className="text-gray-600">Last updated: January 2025</p>
@@ -25,7 +25,7 @@ export default function PrivacyPolicy() {
         <div className="prose max-w-none space-y-6 text-gray-900">
           
           <section>
-            <h2 className={`${bricolageGrotesque.className} text-2xl font-bold mb-3`}>About Happy</h2>
+            <h2 className={`${inter.className} text-2xl font-bold mb-3`}>About Happy</h2>
             <p>
               Happy is a free, open-source project released under the MIT License. The source code is publicly available, 
               and anyone can inspect, modify, and distribute it according to the terms of the MIT License.
@@ -33,7 +33,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className={`${bricolageGrotesque.className} text-2xl font-bold mb-3`}>Data Collection</h2>
+            <h2 className={`${inter.className} text-2xl font-bold mb-3`}>Data Collection</h2>
             <p>
               <strong>We do not collect any data, telemetry, or personal information.</strong> Happy operates with complete privacy:
             </p>
@@ -47,7 +47,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className={`${bricolageGrotesque.className} text-2xl font-bold mb-3`}>End-to-End Encryption</h2>
+            <h2 className={`${inter.className} text-2xl font-bold mb-3`}>End-to-End Encryption</h2>
             <p>
               All communications between your mobile device and computer are protected by end-to-end encryption. 
               This means that your conversations and code remain private and secure, with no third parties able to intercept 
@@ -56,7 +56,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className={`${bricolageGrotesque.className} text-2xl font-bold mb-3`}>Third-Party Services</h2>
+            <h2 className={`${inter.className} text-2xl font-bold mb-3`}>Third-Party Services</h2>
             <p>
               Happy may connect to external AI services (such as Claude) based on your configuration. When using such services:
             </p>
@@ -68,7 +68,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className={`${bricolageGrotesque.className} text-2xl font-bold mb-3`}>Disclaimers</h2>
+            <h2 className={`${inter.className} text-2xl font-bold mb-3`}>Disclaimers</h2>
             <p>
               <strong>We are not responsible for:</strong>
             </p>
@@ -85,7 +85,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className={`${bricolageGrotesque.className} text-2xl font-bold mb-3`}>Independence</h2>
+            <h2 className={`${inter.className} text-2xl font-bold mb-3`}>Independence</h2>
             <p>
               Happy is an independent, community-driven project. <strong>We are not associated with, affiliated with, 
               or endorsed by Anthropic, Claude, or any other AI service providers.</strong> Happy is a third-party client 
@@ -94,7 +94,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className={`${bricolageGrotesque.className} text-2xl font-bold mb-3`}>Open Source Commitment</h2>
+            <h2 className={`${inter.className} text-2xl font-bold mb-3`}>Open Source Commitment</h2>
             <p>
               As an open-source project under the MIT License:
             </p>
@@ -107,7 +107,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className={`${bricolageGrotesque.className} text-2xl font-bold mb-3`}>Changes to Privacy Policy</h2>
+            <h2 className={`${inter.className} text-2xl font-bold mb-3`}>Changes to Privacy Policy</h2>
             <p>
               Since Happy is open source and collects no data, changes to this privacy policy will be reflected in the 
               source code repository. We recommend checking the repository periodically for updates.
@@ -115,7 +115,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className={`${bricolageGrotesque.className} text-2xl font-bold mb-3`}>Contact</h2>
+            <h2 className={`${inter.className} text-2xl font-bold mb-3`}>Contact</h2>
             <p>
               For questions about this privacy policy or Happy in general, please visit our{' '}
               <a 

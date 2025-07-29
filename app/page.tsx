@@ -5,10 +5,10 @@ import GooglePlayButton from '@/components/GooglePlayButton'
 import NpmButton from '@/components/NpmButton'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
-import { Bricolage_Grotesque } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import Link from 'next/link'
 
-const bricolageGrotesque = Bricolage_Grotesque({
+const inter = Inter({
   weight: '700',
   subsets: ['latin'],
 })
@@ -80,7 +80,7 @@ export default function Home() {
   }
   
   return (
-    <main className="min-h-screen relative text-white flex flex-col items-center justify-center p-8">
+    <main className="min-h-screen relative text-white flex flex-col items-center justify-center p-8 font-mono">
       {/* Background Video */}
       <video
         autoPlay
@@ -99,7 +99,7 @@ export default function Home() {
       <div className="relative z-20 max-w-4xl mx-auto text-center">
         {/* Logo */}
         <div className="mb-6 mt-6">
-          <h1 className={`${bricolageGrotesque.className} text-4xl md:text-5xl font-bold text-black`}>
+          <h1 className={`${inter.className} text-4xl md:text-5xl font-bold text-black`}>
             Happy Coder
           </h1>
         </div>
